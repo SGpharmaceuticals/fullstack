@@ -230,8 +230,8 @@ header .part3 .circle svg {
   background: #e2e2e2;
 }
 
-.locationModel .close_ {
-  position: absolute;
+.close_ {
+  position: absolute !important;
   top: 10px;
   right: 10px;
   color: #000;
@@ -240,8 +240,7 @@ header .part3 .circle svg {
   height: 40px;
   border-radius: 50%;
 }
-
-.locationModel .close_ svg {
+.close_ svg {
   font-size: 22px;
 }
 
@@ -430,7 +429,6 @@ nav .navpart2 ul li:hover .submenu {
 
 .homeBannerSection {
   position: relative;
-  overflow: hidden;
 }
 
 .homeBannerSection .slick-arrow {
@@ -520,16 +518,22 @@ nav .navpart2 ul li:hover .submenu {
   font-weight: 600;
 }
 
-.productItem .info .oldPrice {
+.info .oldPrice {
   font-size: 16px;
   font-weight: bold !important;
   color: rgba(0, 0, 0, 0.2);
   text-decoration: line-through;
 }
+.info .oldPrice.lg {
+  font-size: 20px !important;
+}
 
-.productItem .info .netPrice {
+.info .netPrice {
   font-size: 16px;
   font-weight: bold !important;
+}
+.info .netPrice.lg {
+  font-size: 20px !important;
 }
 
 .productItem .actions {
@@ -693,4 +697,96 @@ nav .navpart2 ul li:hover .submenu {
   color: #fff !important;
   text-transform: capitalize !important;
   font-weight: 600 !important;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  background: #fff;
+  padding: 25px 0px;
+}
+
+footer .topInfo {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+}
+footer .topInfo .col {
+  padding: 10px 15px;
+  padding-left: 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+footer .topInfo .col:last-child {
+  border-right: 0px !important;
+}
+
+footer .topInfo .col svg {
+  font-size: 20px;
+}
+
+footer .topInfo .col span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.productModel .MuiPaper-elevation {
+  padding: 25px;
+  position: relative;
+  max-width: 900px;
+  width: 900px !important;
+}
+
+.productModel h4 {
+  font-size: 20px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.productZoom {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.zoomSliderBig {
+  width: 100% !important;
+}
+
+.zoomSlider {
+  padding-top: 30px;
+}
+
+.zoomSlider .slick-slide {
+  padding-right: 20px !important;
+}
+
+.zoomSlider * {
+  outline: none !important;
+}
+
+.zoomSlider .item {
+  border: 2px solid transparent !important;
+  overflow: hidden !important;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.zoomSlider .slick-current .item {
+  border: 2px solid #3bb77e !important;
+}
+
+.zoomSlider .slick-arrow {
+  top: 55% !important;
+  zoom: 80% !important;
+}
+
+.zoomSlider .slick-arrow.slick-next {
+  left: -2% !important;
+}
+
+.zoomSlider .slick-arrow.slick-prev {
+  left: -5% !important;
 }

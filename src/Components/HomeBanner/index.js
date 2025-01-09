@@ -12,33 +12,35 @@ const HomeBanner = () => {
     autoplaySpeed: 5000,
   };
   return (
-    <div className="homeBannerSection">
-      <Slider {...settings}>
-        <div className="item">
-          <img
-            src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
-            className="w-100"
-          />
-        </div>
-        <div className="item">
-          <img
-            src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
-            className="w-100"
-          />
-        </div>
-        <div className="item">
-          <img
-            src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
-            className="w-100"
-          />
-        </div>
-        <div className="item">
-          <img
-            src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
-            className="w-100"
-          />
-        </div>
-      </Slider>
+    <div className="container mt-3">
+      <div className="homeBannerSection">
+        <Slider {...settings}>
+          <div className="item">
+            <img
+              src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
+              className="w-100"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
+              className="w-100"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
+              className="w-100"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://troikkhealthcare.com/wp-content/uploads/2020/08/slider-medications.jpg"
+              className="w-100"
+            />
+          </div>
+        </Slider>
+      </div>
     </div>
   );
 };

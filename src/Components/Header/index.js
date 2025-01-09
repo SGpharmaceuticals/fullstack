@@ -2,7 +2,6 @@ import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import CountryDropdown from "../CountryDropdown";
 import Button from "@mui/material/Button";
-import { IoIosSearch } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
 import { IoBagOutline } from "react-icons/io5";
 import SearchBox from "./SearchBox";

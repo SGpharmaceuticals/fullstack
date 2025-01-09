@@ -16,6 +16,7 @@ import banner4 from "../../assets/images/banner4.jpg";
 import newsLetterImg from "../../assets/images/newsLetterImg.png";
 
 import { CiMail } from "react-icons/ci";
+
 const Home = () => {
   var productSliderOptions = {
     dots: true,
