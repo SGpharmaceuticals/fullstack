@@ -2,18 +2,18 @@ import Rating from "@mui/material/Rating";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import Button from "@mui/material/Button";
 import { FaRegHeart } from "react-icons/fa6";
-import ProductModel from "../ProductModel";
-import { useState } from "react";
-import Slider from "react-slick";
+import { MyContext } from "../../App";
+import { useContext, useState } from "react";
 
 const ProductItem = () => {
-  const [isOpenProductModel, setisOpenProductModel] = useState(false);
+  const context = useContext(MyContext);
+
   const viewProductDetails = (id) => {
-    setisOpenProductModel(true);
+    context.setisOpenProductModel(true);
   };
 
   const closeProductModel = () => {
-    setisOpenProductModel(false);
+    context.setisOpenProductModel(false);
   };
   return (
     <>
@@ -54,10 +54,6 @@ const ProductItem = () => {
           </div>
         </div>
       </div>
-
-      {isOpenProductModel === true && (
-        <ProductModel closeProductModel={closeProductModel} />
-      )}
 
       {/* <ProductModel /> */}
     </>

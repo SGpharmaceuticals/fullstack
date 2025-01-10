@@ -4,15 +4,21 @@ import Button from "@mui/material/Button";
 import Rating from "@mui/material/Rating";
 import product1 from "../../assets/images/product1.jpg";
 import Slider from "react-slick";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import p01 from "../../assets/images/p 01.jpg";
 import p02 from "../../assets/images/p 02.jpg";
+import QuantityBox from "../QuantityBox";
+import { IoIosHeartEmpty } from "react-icons/io";
+import { MdOutlineCompareArrows } from "react-icons/md";
+import { MyContext } from "../../App";
 
 const ProductModel = (props) => {
   const zoomSliderBig = useRef();
   const zoomSlider = useRef();
+
+  const context = useContext(MyContext);
 
   var settings = {
     dots: false,
@@ -44,9 +50,12 @@ const ProductModel = (props) => {
       <Dialog
         open={true}
         className="productModel"
-        onClose={() => props.closeProductModel()}
+        onClose={() => context.setisOpenProductModel(false)}
       >
-        <Button className="close_" onClick={() => props.closeProductModel()}>
+        <Button
+          className="close_"
+          onClick={() => context.setisOpenProductModel(false)}
+        >
           <MdClose />
         </Button>
         <h4 className="mb-1 font-weight-bold">Product Name</h4>
@@ -71,7 +80,7 @@ const ProductModel = (props) => {
 
         <div className="row mt-2 productDetailModel">
           <div className="col-md-5">
-            <div className="productZoom">
+            <div className="productZoom position-relative">
               <Slider
                 {...settings2}
                 className="zoomSliderBig"
@@ -105,10 +114,33 @@ const ProductModel = (props) => {
               </div>
             </Slider>
           </div>
-          <div className="col-md-7">
-            <div className="d-flex info align-items-center">
+          <div className="col-md-7 ">
+            <div className="d-flex info align-items-center mb-3">
               <span className="oldPrice  mr-2 lg">Rs.510</span>
               <span className="netPrice text-danger lg">Rs.450</span>
+            </div>
+
+            <span className="badge bg-success">In Stock</span>
+            <p className="mt-3">
+              Product Description.Product Description.Product
+              Description.Product Description.Product Description.Product
+              Description.
+            </p>
+
+            <div className="d-flex align-items-center">
+              <QuantityBox />
+              <Button className="btn-blue btn-lg btn-big btn-round ml-3">
+                Add to Cart
+              </Button>
+            </div>
+
+            <div className="d-flex align-items-center mt-5 actions">
+              <Button className="btn-round btn-sml" variant="outlined">
+                <IoIosHeartEmpty /> &nbsp; Add to Wishlist
+              </Button>
+              <Button className="btn-round btn-sml" variant="outlined">
+                <MdOutlineCompareArrows /> &nbsp; Compare
+              </Button>
             </div>
           </div>
         </div>
