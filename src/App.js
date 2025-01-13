@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Components/Footer";
 import ProductModel from "./Components/ProductModel";
 import Listing from "./Pages/Listing";
+import ProductDetails from "./Pages/ProductDetails";
 
 const MyContext = createContext();
 function App() {
@@ -39,6 +40,11 @@ function App() {
         <Routes>
           <Route path="/" exact={true} element={<Home />} />
           <Route path="/cat/:id" exact={true} element={<Listing />} />
+          <Route
+            excact={true}
+            path="/product/:id"
+            element={<ProductDetails />}
+          />
         </Routes>
         <Footer />
         {isOpenProductModel === true && <ProductModel />}

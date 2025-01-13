@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { MyContext } from "../../App";
 import { useContext, useState } from "react";
 
-const ProductItem = () => {
+const ProductItem = (props) => {
   const context = useContext(MyContext);
 
   const viewProductDetails = (id) => {
@@ -17,7 +17,7 @@ const ProductItem = () => {
   };
   return (
     <>
-      <div className="item productItem">
+      <div className={`productItem ${props.itemView}`}>
         <div className="imgWrapper">
           <img
             src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/89ef302aabdd40df976885e26933c34b.jpg"

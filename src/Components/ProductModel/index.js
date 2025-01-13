@@ -2,48 +2,16 @@ import { Dialog } from "@mui/material";
 import { MdClose } from "react-icons/md";
 import Button from "@mui/material/Button";
 import Rating from "@mui/material/Rating";
-import product1 from "../../assets/images/product1.jpg";
-import Slider from "react-slick";
 import { useContext, useRef } from "react";
-import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
-import p01 from "../../assets/images/p 01.jpg";
-import p02 from "../../assets/images/p 02.jpg";
 import QuantityBox from "../QuantityBox";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { MdOutlineCompareArrows } from "react-icons/md";
 import { MyContext } from "../../App";
+import ProductZoom from "../ProductZoom";
 
 const ProductModel = (props) => {
-  const zoomSliderBig = useRef();
-  const zoomSlider = useRef();
-
   const context = useContext(MyContext);
-
-  var settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    fade: false,
-    arrows: true,
-  };
-
-  var settings2 = {
-    dots: false,
-    infinite: false,
-    speed: 700,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: false,
-    arrows: false,
-  };
-
-  const goto = (index) => {
-    zoomSliderBig.current.slickGoTo(index);
-    zoomSlider.current.slickGoTo(index);
-  };
 
   return (
     <>
@@ -80,39 +48,7 @@ const ProductModel = (props) => {
 
         <div className="row mt-2 productDetailModel">
           <div className="col-md-5">
-            <div className="productZoom position-relative">
-              <Slider
-                {...settings2}
-                className="zoomSliderBig"
-                ref={zoomSliderBig}
-              >
-                <div className="item">
-                  <InnerImageZoom
-                    zoomType="hover"
-                    zoomScale={1}
-                    src={product1}
-                  />
-                </div>
-                <div className="item">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={p01} />
-                </div>
-                <div className="item">
-                  <InnerImageZoom zoomType="hover" zoomScale={1} src={p02} />
-                </div>
-              </Slider>
-            </div>
-
-            <Slider {...settings} className="zoomSlider" ref={zoomSlider}>
-              <div className="item">
-                <img src={product1} className="w-100" onClick={() => goto(0)} />
-              </div>
-              <div className="item">
-                <img src={p01} className="w-100" onClick={() => goto(1)} />
-              </div>
-              <div className="item">
-                <img src={p02} className="w-100" onClick={() => goto(2)} />
-              </div>
-            </Slider>
+            <ProductZoom />
           </div>
           <div className="col-md-7 ">
             <div className="d-flex info align-items-center mb-3">
