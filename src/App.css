@@ -13,6 +13,7 @@ body {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.8);
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 .bg-blue {
@@ -30,11 +31,17 @@ body {
 .badge {
   display: inline-block;
   padding: 7px 10px;
+  border-radius: 20px;
 }
 
 .badge.bg-success {
   background: #e5f8ed !important;
   color: #16b858 !important;
+}
+
+.badge-success {
+  color: #00b853;
+  background: #e5f8ed;
 }
 
 button {
@@ -55,6 +62,10 @@ button {
 
 .btn-round {
   border-radius: 30px !important;
+}
+.btn-circle {
+  border-radius: 50% !important;
+  min-width: auto !important;
 }
 
 .btn-sml {
@@ -565,7 +576,7 @@ nav .navpart2 ul li:hover .submenu {
 }
 
 .info .oldPrice {
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold !important;
   color: rgba(0, 0, 0, 0.2);
   text-decoration: line-through;
@@ -575,7 +586,7 @@ nav .navpart2 ul li:hover .submenu {
 }
 
 .info .netPrice {
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold !important;
 }
 .info .netPrice.lg {
@@ -635,6 +646,10 @@ nav .navpart2 ul li:hover .submenu {
 }
 .productItem .imgWrapper:hover img {
   transform: scale(1.1);
+}
+
+.product_row .swiper {
+  padding-right: 80px !important;
 }
 
 .product_row .productItem {
@@ -1048,6 +1063,70 @@ footer .topInfo .col span {
   padding: 45px 0px;
 }
 
-.productDetails .hd {
-  font-size: 25px;
+.productDetails h2.hd {
+  font-size: 26px;
+}
+.productDetails h3.hd {
+  font-size: 18px;
+}
+
+.productDetails .oldPrice {
+  font-size: 20px;
+}
+
+.productDetails .netPrice {
+  font-size: 22px;
+}
+
+.productSize {
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+}
+
+.productSize ul li {
+  margin-right: 10px !important;
+}
+
+.productSize ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #000;
+  font-size: 14px !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.productSize ul li a:hover {
+  background: #c2c1c1;
+}
+.productSize ul li a.active {
+  background: #233a95 !important;
+  color: #fff !important;
+}
+
+.productDetails .btn-circle {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #edeef5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000;
+  padding: 5px !important;
+}
+
+.productDetails .btn-circle svg {
+  color: #000 !important;
+  opacity: 0.8;
+  font-size: 18px;
+}
+
+.productDetails .btn-circle:hover {
+  background: #ccc !important;
 }
