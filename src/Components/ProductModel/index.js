@@ -9,7 +9,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { MdOutlineCompareArrows } from "react-icons/md";
 import { MyContext } from "../../App";
 import ProductZoom from "../ProductZoom";
-
+import { FaCartShopping } from "react-icons/fa6";
 const ProductModel = (props) => {
   const context = useContext(MyContext);
 
@@ -66,7 +66,8 @@ const ProductModel = (props) => {
             <div className="d-flex align-items-center">
               <QuantityBox />
               <Button className="btn-blue btn-lg btn-big btn-round ml-3">
-                Add to Cart
+                <FaCartShopping />
+                &nbsp; Add to Cart
               </Button>
             </div>
 
